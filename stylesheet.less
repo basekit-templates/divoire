@@ -50,19 +50,6 @@ h1 {
 	font-size: @font-swatch1-font-size;
 	padding-bottom: 0;
 }
-h2, h2 > div > span {
-	font-family:@font-swatch6-font-family; 
-	font-weight: @font-swatch5-font-weight; 
-	color: @font-swatch4-color; 
-	line-height:@font-swatch5-line-height; 
-	letter-spacing: @font-swatch5-letter-spacing; 
-	font-size: @font-swatch8-font-size;
-}
-h2 > div > span {
-	color: @color-swatch4;
-	font-family:@font-swatch1-font-family;
-	font-size: bkscale(@font-swatch5-font-size, 1.2);
-}
 h3 {
 	font-family:@font-swatch3-font-family; 
 	font-weight: @font-swatch3-font-weight; 
@@ -270,8 +257,9 @@ input[type=submit],
                 	margin-top: 50px;
                 	text-align: center;
                 	@media @tablet {
-                		font-size: bkscale(@font-swatch5-font-size, 1.3);
-                		line-height: bkscale(@font-swatch5-line-height, 1.3);
+                		font-size: bkscale(@font-swatch5-font-size, 1.2);
+                		letter-spacing: 12px;
+                		line-height: bkscale(@font-swatch5-line-height, 1.1);
                 		margin-top: 25px;
                 	}
                 }
@@ -507,22 +495,20 @@ body {
 	padding: 0 8%;
 }
 
+.widget.menu .menu-items {
+    column-gap: 60px;
+    -moz-column-gap: 60px; 
+    -webkit-column-gap: 60px;
+    .menu-item-promoted {
+		padding: 25px;
+	}
+}
+
 .main {
 	padding: 2em;
 	clear: both;
 	margin: 0 auto;
 	max-width: 1400px;
-	.menu-items {
-        column-gap: 80px;
-        -moz-column-gap: 80px; 
-        -webkit-column-gap: 80px;
-		.menu-item {
-			padding: 1px 20px 45px;
-		}
-		li {
-			padding: 2em 1em !important;
-		}
-	}
 	.menu-subsection {
 		list-style: none;
 		text-align: center;
@@ -531,7 +517,7 @@ body {
 			font-size: @font-swatch4-font-size;
 		}
 		.menu-subsection-header {
-			margin-bottom: 1em;
+			margin-bottom: 3em;
 			h2 {
 				margin-top: 1em;
 				line-height: @font-swatch4-line-height;
@@ -563,7 +549,7 @@ body {
 		background-position: center center;
 		padding: 2px;
 		border: 1px solid darken(@color-swatch7, 20%);
-		box-shadow: inset 0 0 0 2px @color-swatch7;
+		box-shadow: inset 0 0 0 4px @color-swatch7;
 	}
 }
 
@@ -737,7 +723,7 @@ body {
 	clear: both;
 }
 .widget.menusections {
-	margin: 20px 0px 40px;
+	margin: 10px 0px 40px;
 	text-align: center;
 	width: 100%;
 	a {
@@ -804,6 +790,7 @@ body {
 	h2 {
 		padding-bottom: .6em;
 		a {
+			color: inherit;
 			font-family: @font-swatch1-font-family;
 			font-size: @font-swatch4-font-size;
 		}
@@ -1133,9 +1120,9 @@ a.blog-post-more-link, .blog-list-footer a {
 }
 @media @mobile {
 	.widget.feature {
-		&.companyname .feature-bgimg.content-container .companyname a {
+		&.companyname a .feature-bgimg.content-container .companyname a {
 			font-size: bkscale(@font-swatch10-font-size, 0.2);
-			letter-spacing: 8px;
+			letter-spacing: 6px;
 			line-height: 52px;
 			margin: 0.2em 0 0;
 		}
@@ -1149,5 +1136,8 @@ a.blog-post-more-link, .blog-list-footer a {
 		h2 > div > span, .widget.clicktocall a {
 			font-size: bkscale(@font-swatch5-font-size, 1.1);
 		}
+	}
+	.main {
+		padding: 2em;
 	}
 }
