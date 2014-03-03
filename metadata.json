@@ -138,9 +138,9 @@
             "font-family": "\"Vollkorn\", Georgia, serif",
             "font-size": "80px",
             "font-weight": "400",
-            "line-height": "90px",
+            "line-height": "120px",
             "color": "@color-swatch4",
-            "letter-spacing": "18px"
+            "letter-spacing": "15px"
         }
     }
 }
