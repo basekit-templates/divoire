@@ -137,14 +137,6 @@ input[type=submit],
 		letter-spacing: @font-swatch8-letter-spacing; 
 		font-size: @font-swatch10-font-size;
 	}
-	h3 {
-		font-family:@font-swatch9-font-family; 
-		font-weight: @font-swatch9-font-weight; 
-		color:@font-swatch9-color;
-		line-height:@font-swatch9-line-height; 
-		letter-spacing: @font-swatch9-letter-spacing; 
-		font-size: @font-swatch9-font-size;
-	}
 }
 
 .logo h1 {
@@ -175,6 +167,11 @@ input[type=submit],
 	a, a:hover {
 		border-bottom: none;
 	}
+}
+
+.widget.extendednavigation {
+	float: left;
+	width: 100%;
 }
 
 .widget .extendednavigation ul {
@@ -233,24 +230,28 @@ input[type=submit],
         	@media @mobile {
         		padding: 6em 1em;
         	}
-            h2 span{
-            	color: @color-swatch7;
-            	font-family: @font-swatch6-font-family;
-            	font-size: @font-swatch10-font-size; 
-            	letter-spacing: @font-swatch10-letter-spacing;
-            	line-height: @font-swatch10-line-height;
-            	border-bottom: 3px solid @color-swatch7;
-            	padding-bottom: 0;
+        	h2 {
+        		padding-bottom: 0.1em;
+        		color: @color-swatch7;
+            	font-family: @font-swatch8-font-family;
+            	font-size: @font-swatch8-font-size; 
+            	letter-spacing: @font-swatch8-letter-spacing;
+            	line-height: @font-swatch8-line-height;
             	word-wrap: break-word;
             	@media @tablet {
-            		font-size: bkscale(@font-swatch10-font-size, 0.7);
-            		line-height: bkscale(@font-swatch10-line-height, 0.8);
+            		font-size: bkscale(@font-swatch8-font-size, 0.7);
+            		line-height: bkscale(@font-swatch8-line-height, 0.75);
+            	}
+            	span {
+            		border-bottom: 3px solid @color-swatch7;
+            		padding-bottom: 0;
             	}
         	}
-            h3 span { 
+            h3  { 
+            	color: @color-swatch7;
             	display: block;
-            	font-family: @font-swatch6-font-family;
-            	font-size: @font-swatch6-font-size; 
+            	font-family: @font-swatch9-font-family;
+            	font-size: @font-swatch9-font-size; 
             	letter-spacing: bkscale(@font-swatch10-letter-spacing, 0.8);
             	line-height: @font-swatch5-line-height;
             	margin-top: 20px;
@@ -629,10 +630,6 @@ body {
 }
 .menu-description {
 	margin-bottom: 10px;
-}
-
-.menu-section-item-dietary-props {
-	display: inline-block;
 }
 
 .clearfix:before,
