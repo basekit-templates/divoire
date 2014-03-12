@@ -41,31 +41,6 @@
 	Type
 	=============================== */
 
-h1 {
-	font-family:@font-swatch1-font-family; 
-	font-weight: @font-swatch1-font-weight; 
-	color: @color-swatch3; 
-	line-height:@font-swatch1-line-height; 
-	letter-spacing: @font-swatch1-letter-spacing; 
-	font-size: @font-swatch1-font-size;
-	padding-bottom: 0;
-}
-h3 {
-	font-family:@font-swatch3-font-family; 
-	font-weight: @font-swatch3-font-weight; 
-	color:@font-swatch3-color; 
-	line-height:@font-swatch3-line-height; 
-	letter-spacing: @font-swatch3-letter-spacing; 
-	font-size: @font-swatch3-font-size;
-}
-h4 {
-	font-family:@font-swatch4-font-family; 
-	font-weight: @font-swatch4-font-weight; 
-	color:@font-swatch4-color; 
-	line-height:@font-swatch4-line-height; 
-	letter-spacing: @font-swatch4-letter-spacing; 
-	font-size: @font-swatch4-font-size;
-}
 h5, .main p, .main .p-font, .main a, .widget.profile, label, p, .menu-item-nutritional-title {
 	font-family:@font-swatch5-font-family;
 	font-weight: @font-swatch5-font-weight;
@@ -192,14 +167,14 @@ input[type=submit],
 	background: @color-swatch7;
 }
 .widget .extendednavigation ul li .text:hover {
-	color: fade(@color-swatch7, 50%);
+	color: lighten(@font-swatch6-color,10%)
 }
 .widget .extendednavigation ul li.folder .text {
-	color: @color-swatch7;
+	color: @font-swatch6-color;
 	display: inline;
 }
 .widget .extendednavigation ul li.folder .text:hover {
-	color: fade(@color-swatch7, 50%);
+	color: lighten(@font-swatch6-color,10%);
 }
 .widget .extendednavigation ul li.folder ul .text {
 	color: @color-swatch5;
@@ -472,7 +447,7 @@ body {
 	background-color: @color-swatch1;
 	background-size: cover;
 	background-attachment: fixed;
-	padding: 0 2% 2%;
+	padding: 2%;
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
 }
@@ -658,7 +633,7 @@ body {
 }
 
 .nav {
-	background: @color-swatch1;
+	background-color: transparent;
 	li {
 		margin: 0;
 	}
@@ -694,6 +669,7 @@ body {
 			}
 		}
 		&:hover {
+			color:lighten(@font-swatch6-color,5%);
 			ul {
 				display: block;
 			}
@@ -705,10 +681,11 @@ body {
 			display: list-item;
 		}
 		.text {
-			color: @color-swatch7;
+			color: @font-swatch6-color;
 		}
 	}
 }
+
 .home-feature {
 	clear: both;
 }
@@ -1108,6 +1085,11 @@ a.blog-post-more-link, .blog-list-footer a {
 	}
 	.widget.feature .feature-bgimg.content-container .companyname a, .widget.feature .feature-bgimg .content-container.content-container .companyname a {
 		line-height: 78px;
+	}
+
+	.widget .extendednavigation a.pull:after {
+		background: @color-swatch3;
+		box-shadow: 0 6px 0 @color-swatch3, 0 12px 0 @color-swatch3;
 	}
 }
 @media @mobile {
