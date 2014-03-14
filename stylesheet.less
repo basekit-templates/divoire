@@ -433,7 +433,7 @@ button.btn,
 }
 
 .menu-item-nutritional-title {
-	font-weight: @font-swatch9-font-weight;
+	font-weight: 700;
 }
 
 /*	===============================
@@ -478,7 +478,7 @@ body {
 	padding: 2em;
 	clear: both;
 	margin: 0 auto;
-	max-width: 1400px;
+	max-width: 1200px;
 	.menu-subsection {
 		list-style: none;
 		text-align: center;
@@ -583,7 +583,7 @@ body {
 	border-top: 1px solid fade(@color-swatch5, 50%);
 	clear: both;
 	margin: 2em 2em 0 2em;
-	padding: 4em 0;
+	padding: 4em 0 1em 0;
 }
 .article, .menu-item {
 	clear: both;
@@ -621,6 +621,16 @@ body {
     *zoom: 1;
 }
 
+.main .menu-subsection {
+	border:0;
+	background-color:transparent;
+}
+
+.menu-subsection-wrapper.menu-subsection-promoted {
+	background-color: rgba(1, 1, 1, 0.05);
+	padding:20px;
+}
+
 /*	===============================
 	Design specific
 	=============================== */
@@ -655,7 +665,7 @@ body {
 	}
 	li {
 		position: relative;
-		padding: 1.7em 0;
+		padding: 1.7em 0 0 0;
 		ul {
 			display: none;
 			position: absolute;
